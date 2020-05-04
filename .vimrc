@@ -137,12 +137,17 @@ set makeprg=bundle\ exec\ rspec\ -f\ QuickfixFormatter
 " PLUG INS:
 call plug#begin('~/.vim/plugged')
 
-"Plug-in from https://github.com/itchyny/lightline.vim
-Plug 'itchyny/lightline.vim'
-"Plug-in from https://github.com/morhetz/gruvbox
-Plug 'morhetz/gruvbox'    
 "Plug-in from https://github.com/preservim/nerdtree
 Plug 'preservim/nerdtree'
+
+"Plug-in from https://github.com/itchyny/lightline.vim
+Plug 'itchyny/lightline.vim'
+
+"Plug-in from https://github.com/junegunn/goyo.vim
+Plug 'junegunn/goyo.vim'
+
+"Plug-in from https://github.com/morhetz/gruvbox
+Plug 'morhetz/gruvbox'    
 
 call plug#end()
 
