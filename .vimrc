@@ -137,19 +137,32 @@ set makeprg=bundle\ exec\ rspec\ -f\ QuickfixFormatter
 " PLUG INS:
 call plug#begin('~/.vim/plugged')
 
-"Plug-in from https://github.com/preservim/nerdtree
-Plug 'preservim/nerdtree'
-
 "Plug-in from https://github.com/itchyny/lightline.vim
+"Adds a status bar displaying the current mode and file name
 Plug 'itchyny/lightline.vim'
 
-"Plug-in from https://github.com/junegunn/goyo.vim
-Plug 'junegunn/goyo.vim'
 
 "Plug-in from https://github.com/morhetz/gruvbox
+"New colorscheme 
 Plug 'morhetz/gruvbox'    
 
+
+"Plug-in from https://github.com/preservim/nerdtree
+"Adds tree structure in file explorer
+Plug 'preservim/nerdtree'
+
+
+"Plug-in from https://github.com/townk/vim-autoclose
+"Adds a matching closing bracket or brace
+Plug 'townk/vim-autoclose'
+
+
+"Plug-in from https://github.com/junegunn/goyo.vim
+"Adds new mode for distraction-free writing
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
+
 
 let g:lightline = {
 \ 'colorscheme': 'seoul256',
