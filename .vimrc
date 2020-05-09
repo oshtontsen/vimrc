@@ -110,6 +110,9 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " Read an empty HTML template and move cursor to title
 nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
 
+" Exit insert mode using jj
+inoremap jj <ESC>
+
 " NOW WE CAN:
 " - Take over the world!
 "   (with much fewer keystrokes)
