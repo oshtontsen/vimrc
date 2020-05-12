@@ -9,7 +9,6 @@
 
 
 
-
 " {{{ BASIC SETUP
 " BASIC SETUP:
 
@@ -110,7 +109,7 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " Read an empty HTML template and move cursor to title
 nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
 
-" Exit insert mode using jj
+" Exit out of insert mode using jj rather than the <ESC> key
 inoremap jj <ESC>
 
 " NOW WE CAN:
@@ -164,9 +163,30 @@ Plug 'townk/vim-autoclose'
 "Adds new mode for distraction-free writing
 Plug 'junegunn/goyo.vim'
 
+
+"Plug-in from https://github.com/wikitopian/hardmode
+"Adds new mode for avoiding certain inefficient vim keys 
+Plug 'wikitopian/hardmode'
+
+
+"Plug-in from https://github.com/junegunn/fzf.vim'
+"Allows for fuzzy searches and works in conjunction with ripgrep
+"Requires: https://github.com/BurntSushi/ripgrep
+"
+"To use ripgrep add the following into the .bashrc file
+"export FZF_DEFAULT="rg --files --hidden --follow --glob '!.git'"
+"
+"To cycle through ripgrep search results use the following commands
+"ctrl + j,k
+"
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+
 call plug#end()
 
 
+" Allow seoul256 theme for lightline
 let g:lightline = {
 \ 'colorscheme': 'seoul256',
 \ }
