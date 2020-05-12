@@ -1,4 +1,4 @@
-"
+R
 "██╗   ██╗██╗███╗   ███╗
 "██║   ██║██║████╗ ████║
 "██║   ██║██║██╔████╔██║
@@ -171,15 +171,17 @@ Plug 'wikitopian/hardmode'
 
 "Plug-in from https://github.com/junegunn/fzf.vim'
 "Allows for fuzzy searches and works in conjunction with ripgrep
-"Requires: https://github.com/BurntSushi/ripgrep
 "
+"Add the following for latest binary: 
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } }
+"
+"Requires: https://github.com/BurntSushi/ripgrep
 "To use ripgrep add the following into the .bashrc file
 "export FZF_DEFAULT="rg --files --hidden --follow --glob '!.git'"
 "
 "To cycle through ripgrep search results use the following commands
 "ctrl + j,k
-"
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 
