@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/otsen/Documents/MyWork/OPERA_weights_list/ISARClassifier/classifier/utils'
-let g:netrw_dirhist_2='/home/otsen/Documents/MyWork/OPERA_weights_list/ISARClassifier'
-let g:netrw_dirhist_3='/home/otsen/Documents/MyWork/OPERA_weights_list/ISARClassifier/classifier'
-let g:netrw_dirhist_4='/home/otsen/Documents/MyWork/OPERA_weights_list/ISARClassifier/classifier/samplers'
