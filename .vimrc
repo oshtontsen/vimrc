@@ -1,3 +1,4 @@
+"
 "██╗   ██╗██╗███╗   ███╗
 "██║   ██║██║████╗ ████║
 "██║   ██║██║██╔████╔██║
@@ -32,7 +33,6 @@ set laststatus=2
 " enable syntax and plugins (for netrw)
 syntax enable
 filetype plugin on
-
 
 
 
@@ -101,6 +101,9 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - check |netrw-browse-maps| for more mappings
 
 
+" Turn relative line numbers on
+:set relativenumber
+:set rnu
 
 
 " SNIPPETS:
@@ -131,6 +134,9 @@ set makeprg=bundle\ exec\ rspec\ -f\ QuickfixFormatter
 " - :cl to list errors
 " - :cc# to jump to error by number
 " - :cn and :cp to navigate forward and back
+
+" Add mapping to quickly insert a breakpoint 
+let @d = 'import pdb; pdb.set_trace()'
 
 
 
@@ -170,17 +176,15 @@ Plug 'wikitopian/hardmode'
 
 "Plug-in from https://github.com/junegunn/fzf.vim'
 "Allows for fuzzy searches and works in conjunction with ripgrep
-"
-"Add the following for latest binary: 
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } }
-"
 "Requires: https://github.com/BurntSushi/ripgrep
+"
 "To use ripgrep add the following into the .bashrc file
 "export FZF_DEFAULT="rg --files --hidden --follow --glob '!.git'"
 "
 "To cycle through ripgrep search results use the following commands
 "ctrl + j,k
-Plug 'junegunn/fzf'
+"
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 
