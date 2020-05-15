@@ -144,47 +144,51 @@ let @d = 'import pdb; pdb.set_trace()'
 " PLUG INS:
 call plug#begin('~/.vim/plugged')
 
-"Plug-in from https://github.com/itchyny/lightline.vim
-"Adds a status bar displaying the current mode and file name
+" Plug-in from https://github.com/itchyny/lightline.vim
+" Adds a status bar displaying the current mode and file name
 Plug 'itchyny/lightline.vim'
 
 
-"Plug-in from https://github.com/morhetz/gruvbox
-"New colorscheme 
+" Plug-in from https://github.com/morhetz/gruvbox
+" New colorscheme 
 Plug 'morhetz/gruvbox'    
 
 
-"Plug-in from https://github.com/preservim/nerdtree
-"Adds tree structure in file explorer
+" Plug-in from https://github.com/preservim/nerdtree
+" Adds tree structure in file explorer
 Plug 'preservim/nerdtree'
 
 
-"Plug-in from https://github.com/townk/vim-autoclose
-"Adds a matching closing bracket or brace
+" Plug-in from https://github.com/townk/vim-autoclose
+" Adds a matching closing bracket or brace
 Plug 'townk/vim-autoclose'
 
 
-"Plug-in from https://github.com/junegunn/goyo.vim
-"Adds new mode for distraction-free writing
+" Plug-in from https://github.com/junegunn/goyo.vim
+" Adds new mode for distraction-free writing
 Plug 'junegunn/goyo.vim'
 
 
-"Plug-in from https://github.com/wikitopian/hardmode
-"Adds new mode for avoiding certain inefficient vim keys 
+" Plug-in from https://github.com/wikitopian/hardmode
+" Adds new mode for avoiding certain inefficient vim keys 
 Plug 'wikitopian/hardmode'
 
 
-"Plug-in from https://github.com/junegunn/fzf.vim'
-"Allows for fuzzy searches and works in conjunction with ripgrep
-"Requires: https://github.com/BurntSushi/ripgrep
+" Plug-in from https://github.com/junegunn/fzf.vim'
+" Allows for fuzzy searches and works in conjunction with ripgrep
 "
-"To use ripgrep add the following into the .bashrc file
-"export FZF_DEFAULT="rg --files --hidden --follow --glob '!.git'"
+" Add the following for latest binary:
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } }
 "
-"To cycle through ripgrep search results use the following commands
-"ctrl + j,k
+" Requires: https://github.com/BurntSushi/ripgrep
 "
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" To use ripgrep add the following into the .bashrc file
+" export FZF_DEFAULT="rg --files --hidden --follow --glob '!.git'"
+"
+" To cycle through ripgrep search results use the following commands
+" ctrl + j,k
+"
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 
