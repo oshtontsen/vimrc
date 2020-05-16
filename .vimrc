@@ -8,7 +8,6 @@
 "
 
 
-
 " {{{ BASIC SETUP
 " BASIC SETUP:
 
@@ -33,6 +32,9 @@ set laststatus=2
 " enable syntax and plugins (for netrw)
 syntax enable
 filetype plugin on
+
+" Remap the leader key to space bar
+let mapleader = "\<Space>" 
 
 
 
@@ -136,8 +138,7 @@ set makeprg=bundle\ exec\ rspec\ -f\ QuickfixFormatter
 " - :cn and :cp to navigate forward and back
 
 " Add mapping to quickly insert a breakpoint 
-let @d = 'import pdb; pdb.set_trace()'
-
+let @d = 'iimport pdb; pdb.set_trace()'
 
 
 
@@ -192,13 +193,42 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 
+" Plug-in for git supported actions 
+Plug 'tpope/vim-fugitive'
+
+
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+" To remap the git status command 
+nmap <leader>gs :G<CR>
+
+
 call plug#end()
 
 
-" Allow seoul256 theme for lightline
+
+
+" Lightline status bar configurations 
 let g:lightline = {
-\ 'colorscheme': 'seoul256',
-\ }
+      \ 'colorscheme': 'seoul256',
+      \ 'active': {
+      \   'left': [ ['mode', 'paste'],
+      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*FugitiveHead")?FugitiveHead():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
+      \ },
+      \ 'separator': { 'left': ' ', 'right': ' ' },
+      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ }
 
 
 " COLORSCHEME
