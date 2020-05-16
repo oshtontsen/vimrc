@@ -197,15 +197,19 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 
 
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
-" To remap the git status command 
-nmap <leader>gs :G<CR>
-
 
 call plug#end()
 
 
+
+
+
+" Fugitive configurations 
+nmap <leader>gh :diffget //3<CR>
+"
+nmap <leader>gu :diffget //2<CR>
+" To remap the git status command 
+nmap <leader>gs :G<CR>
 
 
 " Lightline status bar configurations 
