@@ -205,11 +205,11 @@ call plug#end()
 
 
 " Fugitive configurations 
-nmap <leader>gh :diffget //3<CR>
 "
-nmap <leader>gu :diffget //2<CR>
 " To remap the git status command 
 nmap <leader>gs :G<CR>
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
 
 
 " Lightline status bar configurations 
