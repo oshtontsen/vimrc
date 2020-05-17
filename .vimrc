@@ -28,6 +28,8 @@ set undofile
 set incsearch
 set hlsearch
 set laststatus=2
+" Leaves 7 lines below/above the cursor when scrolling 
+set so=7
 
 " enable syntax and plugins (for netrw)
 syntax enable
