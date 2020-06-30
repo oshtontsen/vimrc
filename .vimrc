@@ -162,6 +162,11 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 
 
+" Plug-in from https://github.com/dense-analysis/ale
+" Asynchronously runs linters and fixers for debugging
+Plug 'dense-analysis/ale'
+
+
 " Plug-in from https://github.com/townk/vim-autoclose
 " Adds a matching closing bracket or brace
 Plug 'townk/vim-autoclose'
@@ -235,6 +240,12 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
+
+
+" Ale configurations
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'*': [], 'python': ['black', 'isort']}
+let g:ale_fix_on_save = 1
 
 
 " COLORSCHEME
