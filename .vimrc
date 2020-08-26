@@ -17,7 +17,7 @@ set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
-set smartindent
+set cindent cinkeys-=0#
 set nu
 set nowrap
 set smartcase
