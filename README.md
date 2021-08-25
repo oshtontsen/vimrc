@@ -11,10 +11,11 @@ After cloning this repo, here are a couple steps to take to get fully set up:
     2. vim .vimrc
     3. :source .vimrc
     4. Install all Plug-ins from the internet using the following command:
-       PlugInstall
+       :PlugInstall
     5. Install Flake8 to enable linting:
        $ python -m pip install flake8
     6. Install Silver Surfer
        $ brew install ripgrep
     7. Install Black
        $ pip install black
+Note that if PlugInstall command is not found, check whether git is installed on your machine. If not, then install it using yum install or apt-get.
