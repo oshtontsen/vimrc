@@ -19,3 +19,8 @@ After cloning this repo, here are a couple steps to take to get fully set up:
     7. Install Black
        $ pip install black
 Note that if PlugInstall command is not found, check whether git is installed on your machine. If not, then install it using yum install or apt-get.
+
+For IdeaVim on PyCharm, you must create a .ideavimrc file (cd ~; vim .ideavimrc)
+In .ideavimrc, add the following snippet to configure Esc:
+imap jj <Esc>
+set timeoutlen=1000
