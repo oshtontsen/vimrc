@@ -23,6 +23,6 @@ Note that if PlugInstall command is not found, check whether git is installed on
 For IdeaVim on PyCharm, you must create a .ideavimrc file (cd ~; vim .ideavimrc)
 In .ideavimrc, add the following snippet to configure Esc:
 
-imap jj <Esc>
+imap jj /<Esc/>
 
 set timeoutlen=1000
